@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSA Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">DSA<span>Viz</span></div>
+
+    <nav>
+        <a href="#visualizer">Visualizer</a>
+        <a href="#operations">Operations</a>
+        <a href="#history">History</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <span class="tag">INTERACTIVE DSA LEARNING</span>
+
+        <h1>
+            See Data Structures
+            <span>Come Alive.</span>
+        </h1>
+
+        <p>
+            Learn arrays, stacks, queues and linked lists
+            through interactive visual operations.
+        </p>
+
+        <a href="#visualizer" class="hero-btn">Start Visualizing</a>
+    </div>
+</section>
+
+<section class="visualizer-section" id="visualizer">
+
+    <div class="section-title">
+        <h2>Choose a Data Structure</h2>
+        <p>Select a structure and experiment with its operations.</p>
+    </div>
+
+    <div class="structure-tabs">
+
+        <button class="structure-btn active" data-structure="array">
+            <strong>Array</strong>
+            <span>Indexed Collection</span>
+        </button>
+
+        <button class="structure-btn" data-structure="stack">
+            <strong>Stack</strong>
+            <span>LIFO</span>
+        </button>
+
+        <button class="structure-btn" data-structure="queue">
+            <strong>Queue</strong>
+            <span>FIFO</span>
+        </button>
+
+        <button class="structure-btn" data-structure="linkedlist">
+            <strong>Linked List</strong>
+            <span>Node Based</span>
+        </button>
+
+    </div>
+
+    <div class="visualizer-card">
+
+        <div class="visualizer-header">
+            <div>
+                <span id="structureLabel">ARRAY</span>
+                <h2 id="structureTitle">Array Visualizer</h2>
+            </div>
+
+            <button id="resetBtn" class="reset-btn">
+                Reset
+            </button>
+        </div>
+
+        <div class="info-box">
+            <strong id="descriptionTitle">Array</strong>
+            <p id="structureDescription">
+                An ordered collection where each element is accessed using an index.
+            </p>
+        </div>
+
+        <div id="visualArea" class="visual-area">
+            <!-- JavaScript renders structure here -->
+        </div>
+
+        <div class="input-area">
+
+            <input
+                type="text"
+                id="valueInput"
+                placeholder="Enter a value..."
+            >
+
+            <button id="primaryBtn">
+                Add Element
+            </button>
+
+            <button id="secondaryBtn">
+                Remove Element
+            </button>
+
+        </div>
+
+        <div class="extra-actions">
+
+            <button id="searchBtn">
+                Search
+            </button>
+
+            <button id="sortBtn">
+                Sort
+            </button>
+
+            <button id="clearBtn">
+                Clear All
+            </button>
+
+        </div>
+
+        <div id="messageBox" class="message-box">
+            Ready to visualize.
+        </div>
+
+    </div>
+
+</section>
+
+<section class="operations-section" id="operations">
+
+    <div class="section-title">
+        <h2>How It Works</h2>
+        <p>Understand the basic rule behind each data structure.</p>
+    </div>
+
+    <div class="operation-grid">
+
+        <div class="operation-card">
+            <span class="operation-number">01</span>
+            <h3>Array</h3>
+            <p>
+                Elements are stored in an ordered sequence and accessed
+                using their index.
+            </p>
+            <strong>Access: O(1)</strong>
+        </div>
+
+        <div class="operation-card">
+            <span class="operation-number">02</span>
+            <h3>Stack</h3>
+            <p>
+                Follows LIFO — Last In, First Out.
+                The latest element is removed first.
+            </p>
+            <strong>Push / Pop: O(1)</strong>
+        </div>
+
+        <div class="operation-card">
+            <span class="operation-number">03</span>
+            <h3>Queue</h3>
+            <p>
+                Follows FIFO — First In, First Out.
+                The first element is removed first.
+            </p>
+            <strong>Enqueue / Dequeue: O(1)</strong>
+        </div>
+
+        <div class="operation-card">
+            <span class="operation-number">04</span>
+            <h3>Linked List</h3>
+            <p>
+                Nodes are connected using links and each node stores
+                data with a reference to the next node.
+            </p>
+            <strong>Insert at Head: O(1)</strong>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="stats-section">
+
+    <div class="stats-card">
+        <strong id="operationCount">0</strong>
+        <span>Operations</span>
+    </div>
+
+    <div class="stats-card">
+        <strong id="elementCount">0</strong>
+        <span>Current Elements</span>
+    </div>
+
+    <div class="stats-card">
+        <strong id="structureCount">1</strong>
+        <span>Structures Used</span>
+    </div>
+
+</section>
+
+<section class="history-section" id="history">
+
+    <div class="section-title">
+        <h2>Operation History</h2>
+        <p>Track what you have experimented with.</p>
+    </div>
+
+    <div class="history-card">
+
+        <div class="history-header">
+            <h3>Recent Operations</h3>
+
+            <button id="clearHistoryBtn" class="clear-btn">
+                Clear History
+            </button>
+        </div>
+
+        <div id="historyContainer">
+            <div class="history-empty">
+                No operations yet.
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 DSA Viz | Interactive Data Structures</p>
+    <p>Learn. Visualize. Understand.</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
